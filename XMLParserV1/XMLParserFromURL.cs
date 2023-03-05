@@ -21,17 +21,6 @@ namespace XMLParserV1
             this.URL = URL;
             GetRecordCount = getRecordCount;
         }
-        // Validate Schema
-        public string ValidateSchema()
-        {
-            return "Add Code that validates Schema";
-        }
-        // Helper Method
-        public string RemoveNonNumberic(string input)
-        {
-            string clean = Regex.Replace(input, "[^0-9]", "");
-            return clean;
-        }
         // Read MP Data
         public List<MemberOfParliament> GetAllData()
         {
@@ -64,7 +53,7 @@ namespace XMLParserV1
                         string? MemberName = reader.GetAttribute("membername");
                         TempName = MemberName;
                         string? PersonLinkRaw = reader.GetAttribute("personid");
-                        tempId = RemoveNonNumberic(PersonLinkRaw);
+                        tempId = UIHelper.RemoveNonNumeric(PersonLinkRaw);
                         //string? date = reader.GetAttribute("date");
                         //DateRecordAdded = date;
                     }
@@ -91,7 +80,7 @@ namespace XMLParserV1
                                 {
                                     string sub = Item.Substring(indexOfPound, 10);
 
-                                    string clean = RemoveNonNumberic(sub);
+                                    string clean = UIHelper.RemoveNonNumeric(sub);
                                     if (clean != null && clean != "")
                                     {
                                         long paymentNum = Int64.Parse(clean);
@@ -109,12 +98,10 @@ namespace XMLParserV1
 
                             }
                         }
-                        if (TempName != "" && tempId != "")
+                        if (TempName != "" && tempId != "" && payments.Count > 1 && donnorName.Count > 0)
                         {
-                            System.Diagnostics.Debug.WriteLine("Number of Donors Found " + donnorName.Count);
-                            // Create Member and add To List
-                            MemberOfParliament newMember = new MemberOfParliament(TempName, tempId, paymentDates, payments, donnorName);
-                            members.Add(newMember);
+                            MemberOfParliament MP = FactoryClass.GetMP(TempName, tempId, paymentDates, payments, donnorName);
+                            members.Add(MP);
                             // Reset Temp Variables
                             TempName = "";
                             tempId = "";
@@ -122,7 +109,6 @@ namespace XMLParserV1
                             payments.Clear();
                         }
                     }
-                  
                     // Check Count of Records
                     if (GetRecordCount != 0 && members.Count == GetRecordCount)
                     {
