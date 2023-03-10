@@ -16,7 +16,7 @@ namespace XMLParserV1.Tests
         {
             // Arrange
             CSVLocalFileReader reader = new CSVLocalFileReader();
-            reader.filePath = "B:\\repos\\XMLParserV1\\mps.csv";
+            reader.filePath = "mps.csv";
             reader.Counter = 0;
             // Act
             List<string> LocalOutput = reader.GetAllData();
@@ -29,7 +29,7 @@ namespace XMLParserV1.Tests
         {
             // Arrange
             CSVLocalFileReader reader = new CSVLocalFileReader();
-            reader.filePath = "B:\\repos\\XMLParserV1\\mps.csv";
+            reader.filePath = "mps.csv";
             reader.Counter = 0;
             // Act
             List<string> LocalOutput = reader.GetAllData();
@@ -42,7 +42,7 @@ namespace XMLParserV1.Tests
         {
             // Arrange
             CSVLocalFileReader reader = new CSVLocalFileReader();
-            reader.filePath = "B:\\repos\\XMLParserV1\\mps.csv";
+            reader.filePath = "mps.csv";
             reader.Counter = 0;
             // Act
             List<string> LocalOutput = reader.GetAllData();
