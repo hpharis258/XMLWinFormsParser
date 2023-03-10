@@ -30,7 +30,7 @@ namespace XMLParserV1
             string Message = "Clink on the Link to find out more about each member!";
             MessageBox.Show(Message);
             // Run Background Worker to Get the Rest of the Data
-            this.Worker = new BackgroundWorker();
+            this.Worker = SingletonBackgroundWorker.GetWorker();
             this.Worker.DoWork += new DoWorkEventHandler(bw_DoWork);
             this.Worker.ProgressChanged += new ProgressChangedEventHandler(bw_ProgressChanged);
             this.Worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bw_RunWorkerCompleted);

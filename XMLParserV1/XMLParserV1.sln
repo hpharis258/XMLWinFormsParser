@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XMLParserV1", "XMLParserV1.csproj", "{3E90DD19-23D9-4A0C-956D-43E781C558D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLParserV1Tests", "..\XMLParserV1Tests\XMLParserV1Tests.csproj", "{3BBE3A36-E0CD-4AE8-B982-8C58C50DA9DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLParserV1Tests1", "..\XMLParserV1Tests1\XMLParserV1Tests1.csproj", "{AF657A9D-D064-4A04-A5D1-8235953EB0B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{3E90DD19-23D9-4A0C-956D-43E781C558D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E90DD19-23D9-4A0C-956D-43E781C558D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E90DD19-23D9-4A0C-956D-43E781C558D6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3BBE3A36-E0CD-4AE8-B982-8C58C50DA9DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3BBE3A36-E0CD-4AE8-B982-8C58C50DA9DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3BBE3A36-E0CD-4AE8-B982-8C58C50DA9DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3BBE3A36-E0CD-4AE8-B982-8C58C50DA9DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF657A9D-D064-4A04-A5D1-8235953EB0B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF657A9D-D064-4A04-A5D1-8235953EB0B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF657A9D-D064-4A04-A5D1-8235953EB0B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF657A9D-D064-4A04-A5D1-8235953EB0B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
