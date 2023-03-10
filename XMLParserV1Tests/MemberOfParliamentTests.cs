@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Reflection.Metadata.Ecma335;
 
 namespace XMLParserV1.Tests
 {
@@ -13,7 +12,7 @@ namespace XMLParserV1.Tests
     public class MemberOfParliamentTests
     {
         [TestMethod()]
-        public void MemberCalculateFullAmountTest()
+        public void CalculateFullAmmount_PaymentSum_Pass()
         {
             // Arrange
 
@@ -36,11 +35,10 @@ namespace XMLParserV1.Tests
             // Assert
             Assert.AreEqual(225, testMember.FullAmountReceived);
 
-            //Assert.Fail();
         }
 
         [TestMethod()]
-        public void MemberOfParliamentTestNullCheck()
+        public void MemberOfParliament_NullCheck_Pass()
         {
             List<string> date = new List<string>();
             date.Add("test date 15/02/2023");
@@ -61,9 +59,8 @@ namespace XMLParserV1.Tests
             // Assert
             Assert.IsNotNull(testMember);
         }
-
         [TestMethod()]
-        public void MemberOfParliamentTestCheckReturnedObject()
+        public void MemberOfParliament_TypeCheck_Pass()
         {
             List<string> date = new List<string>();
             date.Add("test date 15/02/2023");
@@ -84,9 +81,7 @@ namespace XMLParserV1.Tests
             // Assert
             Assert.IsInstanceOfType(testMember, typeof(MemberOfParliament));
         }
-
-        [TestMethod()]
-        public void MemberOfParliamentTestCheckInitValues()
+        public void MemberOfParliament_valueCheck_Pass()
         {
             List<string> date = new List<string>();
             date.Add("test date 15/02/2023");

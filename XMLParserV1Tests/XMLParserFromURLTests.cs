@@ -12,7 +12,7 @@ namespace XMLParserV1.Tests
     public class XMLParserFromURLTests
     {
         [TestMethod()]
-        public void GetAllDataTestDataType()
+        public void GetAllData_TypeCheck_Pass()
         {
             // Arrange
             XMLParserFromURL XMLParser = new XMLParserFromURL("https://www.theyworkforyou.com/pwdata/scrapedxml/regmem/regmem2021-12-13.xml");
@@ -22,9 +22,8 @@ namespace XMLParserV1.Tests
             // Assert
             Assert.IsInstanceOfType(List, typeof(List<MemberOfParliament>));
         }
-
         [TestMethod()]
-        public void GetAllDataTestIsNotNull()
+        public void GetAllData_NullCheck_Pass()
         {
             // Arrange
             XMLParserFromURL XMLParser = new XMLParserFromURL("https://www.theyworkforyou.com/pwdata/scrapedxml/regmem/regmem2021-12-13.xml");
@@ -34,9 +33,7 @@ namespace XMLParserV1.Tests
             // Assert
             Assert.IsNotNull(List);
         }
-
-        [TestMethod()]
-        public void GetAllDataTestDidReturnAllMembers()
+        public void GetAllData_CountCheck_Pass()
         {
             // Arrange
             XMLParserFromURL XMLParser = new XMLParserFromURL("https://www.theyworkforyou.com/pwdata/scrapedxml/regmem/regmem2021-12-13.xml");

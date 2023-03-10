@@ -12,7 +12,7 @@ namespace XMLParserV1.Tests
     public class CSVLocalFileReaderTests
     {
         [TestMethod()]
-        public void GetAllDataTestNullCheck()
+        public void GetAllDataTest_NullCheck_Pass()
         {
             // Arrange
             CSVLocalFileReader reader = new CSVLocalFileReader();
@@ -23,9 +23,8 @@ namespace XMLParserV1.Tests
             // Assert
             Assert.IsNotNull(LocalOutput);
         }
-
         [TestMethod()]
-        public void GetAllDataTestDataTypeCheck()
+        public void GetAllDataTest_TypeCheck_Pass()
         {
             // Arrange
             CSVLocalFileReader reader = new CSVLocalFileReader();
@@ -36,9 +35,8 @@ namespace XMLParserV1.Tests
             // Assert
             Assert.IsInstanceOfType(LocalOutput, typeof(List<string>));
         }
-
         [TestMethod()]
-        public void GetAllDataTestDataCountCheck()
+        public void GetAllDataTest_CountCheck_Pass()
         {
             // Arrange
             CSVLocalFileReader reader = new CSVLocalFileReader();
@@ -46,8 +44,9 @@ namespace XMLParserV1.Tests
             reader.Counter = 0;
             // Act
             List<string> LocalOutput = reader.GetAllData();
+            System.Diagnostics.Debug.WriteLine(LocalOutput.Count);
             // Assert
-            Assert.IsTrue(LocalOutput.Count > 647);   
+            Assert.IsTrue(LocalOutput.Count == 650);
         }
     }
 }
